@@ -1,4 +1,21 @@
 --
+--treesitter
+--
+require'nvim-treesitter.configs'.setup {
+  -- A list of parser names, or "all"
+  ensure_installed = { "go", "lua", "rust" },
+
+  -- Install parsers synchronously (only applied to `ensure_installed`)
+  sync_install = false,
+
+  highlight = {
+    -- `false` will disable the whole extension
+    enable = true,
+  },
+}
+
+
+--
 -- theme
 --
 require('monokai').setup {}
