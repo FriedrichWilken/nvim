@@ -15,4 +15,5 @@ this is my nvim config. for plugins I use (packer)[https://github.com/wbthomason
 - [ ] [ale](https://github.com/dense-analysis/ale)
 - [ ] [nerdcommenter](https://github.com/preservim/nerdcommenter)
 - [ ] [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
-- [ ] [barbar](https://github.com/romgrk/barbar.nvim)
+- [x] [barbar](https://github.com/romgrk/barbar.nvim)
+  - looks to be overkill to me
