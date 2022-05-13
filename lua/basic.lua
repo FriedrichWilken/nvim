@@ -8,3 +8,22 @@ vim.opt.expandtab = true
 
 -- line number
 vim.wo.number = true
+vim.wo.relativenumber = true
+
+vim.api.nvim_create_autocmd("ModeChanged", { 
+    pattern = "*:i",
+    group = group,
+    callback = function()    
+      vim.wo.relativenumber = false
+    end,
+  }
+)
+
+vim.api.nvim_create_autocmd("ModeChanged", { 
+    pattern = "i:*",
+    group =  group,
+    callback = function()
+      vim.wo.relativenumber = true
+    end,
+  }
+)
