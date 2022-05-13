@@ -6,6 +6,13 @@ vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
 vim.opt.expandtab = true
 
+
+vim.o.scrolloff = 8 -- screen lines to keep above/below the cursor
+vim.o.title = true
+
+vim.opt.cursorline = true
+vim.opt.cursorcolumn = true
+
 -- line number
 vim.wo.number = true
 vim.wo.relativenumber = true
