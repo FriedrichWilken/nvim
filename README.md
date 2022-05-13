@@ -6,7 +6,8 @@ this is my nvim config. for plugins I use (packer)[https://github.com/wbthomason
 
 - [ ] set up [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [ ] mouse support
-- [ ] dynamic line numbering; rel if in insert, abs if in normal. Can I create a plugin for this just for kicks?
+- [x] dynamic line numbering; rel if in insert, abs if in normal.
+  - [ ] create a plugin out of it just for fun.
 - [ ] translate config in `init.vim` to lua
 
 ### plugins to consider
