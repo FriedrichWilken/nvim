@@ -17,20 +17,10 @@ vim.opt.cursorcolumn = true
 vim.wo.number = true
 vim.wo.relativenumber = true
 
-vim.api.nvim_create_autocmd("ModeChanged", { 
-    pattern = "*:i",
-    group = group,
-    callback = function()    
-      vim.wo.relativenumber = false
-    end,
-  }
-)
-
-vim.api.nvim_create_autocmd("ModeChanged", { 
-    pattern = "i:*",
-    group =  group,
-    callback = function()
-      vim.wo.relativenumber = true
-    end,
-  }
-)
+vim.api.nvim_create_autocmd("ModeChanged", {
+  pattern = { "*:i*", "i*:*" },
+  group = group,
+  callback = function()
+    vim.o.relativenumber = vim.v.event.new_mode:match("^i") == nil
+  end,
+})
