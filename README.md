@@ -11,7 +11,7 @@ this is my nvim config. for plugins I use (packer)[https://github.com/wbthomason
 - [ ] translate config in `init.vim` to lua
 
 ### plugins to consider
-- [ ] [go.vim](https://github.com/ray-x/go.nvim)
+- [x] [go.vim](https://github.com/ray-x/go.nvim)
 - [ ] [vim-tree](https://github.com/kyazdani42/nvim-tree.lua)
 - [ ] [ale](https://github.com/dense-analysis/ale)
 - [ ] [nerdcommenter](https://github.com/preservim/nerdcommenter)
