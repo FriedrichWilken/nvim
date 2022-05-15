@@ -1,4 +1,9 @@
 --
+-- autopair
+--
+require('nvim-autopairs').setup{}
+
+--
 --treesitter
 --
 require'nvim-treesitter.configs'.setup {

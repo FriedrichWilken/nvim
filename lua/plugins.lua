@@ -32,11 +32,10 @@ return require('packer').startup(function()
   --> markdown preview
   use 'iamcco/markdown-preview.nvim' 
 
-  --> auto-closing brackets
-  use 'MetalPhaeton/neo-easy-brackets'
-
   --> vim-go
   use { 'fatih/vim-go', run = ':GoUpdateBinaries' }
 
+  --> autopair
+  use 'windwp/nvim-autopairs'
 end)
 
