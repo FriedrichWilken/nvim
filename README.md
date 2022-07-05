@@ -27,6 +27,7 @@ this is my nvim config. for plugins I use (packer)[https://github.com/wbthomason
 ## todos
 ### set up
 
+- [ ] setup LSP according to [this video](https://www.youtube.com/watch?v=puWgHa7k3SY)
 - [x] set up [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [ ] mouse support
 - [x] dynamic line numbering; rel if in insert, abs if in normal.
