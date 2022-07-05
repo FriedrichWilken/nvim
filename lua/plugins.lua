@@ -7,7 +7,11 @@ return require('packer').startup(function()
 
   --> LSP
   use 'neovim/nvim-lspconfig' 
+  --> floating 
+  -- todo how to use this?
+  --  use 'ray-x/lsp_signature.nvim'
   
+
   --> autocomplete
   use 'hrsh7th/nvim-cmp'		-- Autocompletion plugin
   use 'hrsh7th/cmp-nvim-lsp'		-- LSP source for nvim-cmp
