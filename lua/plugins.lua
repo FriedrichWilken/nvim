@@ -39,6 +39,9 @@ return require('packer').startup(function()
   --> vim-go
   use { 'fatih/vim-go', run = ':GoUpdateBinaries' }
 
+  --> rust-tools
+  use 'simrat39/rust-tools.nvim'
+
   --> autopair
   use 'windwp/nvim-autopairs'
 end)
