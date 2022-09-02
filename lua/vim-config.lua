@@ -7,11 +7,7 @@ vim.opt.softtabstop = 4
 vim.opt.expandtab = true
 
 
-vim.opt.list = true
-vim.opt.listchars:append "space:⋅"
-vim.opt.listchars:append "eol:↴"
-
-vim.o.scrolloff = 8 -- screen lines to keep above/below the cursor
+vim.o.scrolloff = 12 -- screen lines to keep above/below the cursor
 vim.o.title = true
 
 vim.opt.cursorline = true
