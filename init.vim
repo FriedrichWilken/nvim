@@ -1,6 +1,6 @@
-lua require("basic")
+lua require("vim-config")
 lua require("plugins")
-lua require("config")
+lua require("plugins-config")
 lua require("mapping")
 
 " this is for any setup that needs vimscript
