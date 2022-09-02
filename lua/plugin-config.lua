@@ -19,7 +19,6 @@ require'nvim-treesitter.configs'.setup {
 vim.opt.list = true
 vim.opt.listchars:append "space:⋅"
 vim.opt.listchars:append "eol:↴"
-
 require("indent_blankline").setup {
     space_char_blankline = " ",
     show_current_context = true,
@@ -99,7 +98,7 @@ cmp.setup {
 }
 
 --> rust-tools
-local opts = {
+local rust_opts = {
     tools = { -- rust-tools options
         -- how to execute terminal commands
         -- options right now: termopen / quickfix
@@ -190,112 +189,111 @@ local opts = {
             -- Is used for input validation and autocompletion
             -- Last updated: 2021-08-26
          enabled_graphviz_backends = {
-        "bmp",
-        "cgimage",
-        "canon",
-        "dot",
-        "gv",
-        "xdot",
-        "xdot1.2",
-        "xdot1.4",
-        "eps",
-        "exr",
-        "fig",
-        "gd",
-        "gd2",
-        "gif",
-        "gtk",
-        "ico",
-        "cmap",
-        "ismap",
-        "imap",
-        "cmapx",
-        "imap_np",
-        "cmapx_np",
-        "jpg",
-        "jpeg",
-        "jpe",
-        "jp2",
-        "json",
-        "json0",
-        "dot_json",
-        "xdot_json",
-        "pdf",
-        "pic",
-        "pct",
-        "pict",
-        "plain",
-        "plain-ext",
-        "png",
-        "pov",
-        "ps",
-        "ps2",
-        "psd",
-        "sgi",
-        "svg",
-        "svgz",
-        "tga",
-        "tiff",
-        "tif",
-        "tk",
-        "vml",
-        "vmlz",
-        "wbmp",
-        "webp",
-        "xlib",
-        "x11",
-      },
+            "bmp",
+            "cgimage",
+            "canon",
+            "dot",
+            "gv",
+            "xdot",
+            "xdot1.2",
+            "xdot1.4",
+            "eps",
+            "exr",
+            "fig",
+            "gd",
+            "gd2",
+            "gif",
+            "gtk",
+            "ico",
+            "cmap",
+            "ismap",
+            "imap",
+            "cmapx",
+            "imap_np",
+            "cmapx_np",
+            "jpg",
+            "jpeg",
+            "jpe",
+            "jp2",
+            "json",
+            "json0",
+            "dot_json",
+            "xdot_json",
+            "pdf",
+            "pic",
+            "pct",
+            "pict",
+            "plain",
+            "plain-ext",
+            "png",
+            "pov",
+            "ps",
+            "ps2",
+            "psd",
+            "sgi",
+            "svg",
+            "svgz",
+            "tga",
+            "tiff",
+            "tif",
+            "tk",
+            "vml",
+            "vmlz",
+            "wbmp",
+            "webp",
+            "xlib",
+            "x11",
+        },
     },
-  },
+},
 
-  -- all the opts to send to nvim-lspconfig
-  -- these override the defaults set by rust-tools.nvim
-  -- see https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#rust_analyzer
-  server = {
-    -- standalone file support
-    -- setting it to false may improve startup time
-    standalone = true,
-  }, -- rust-analyer options
+    -- all the opts to send to nvim-lspconfig
+    -- these override the defaults set by rust-tools.nvim
+    -- see https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#rust_analyzer
+    server = {
+        -- standalone file support
+        -- setting it to false may improve startup time
+        standalone = true,
+    }, -- rust-analyer options
 
-  -- debugging stuff
-  dap = {
-    adapter = {
-      type = "executable",
-      command = "lldb-vscode",
-      name = "rt_lldb",
+    -- debugging stuff
+    dap = {
+        adapter = {
+            type = "executable",
+            command = "lldb-vscode",
+            name = "rt_lldb",
+        },
     },
-  },
 }
+require('rust-tools').setup(rust_opts)
 
-require('rust-tools').setup(opts)
-
---lualine
+--> lualine
 require('lualine').setup {
-  options = {
-    icons_enabled = true,
-    theme = 'auto',
-    component_separators = { left = '', right = ''},
-    section_separators = { left = '', right = ''},
-    disabled_filetypes = {},
-    always_divide_middle = true,
-    globalstatus = false,
-  },
-  sections = {
-    lualine_a = {'mode'},
-    lualine_b = {'branch', 'diff', 'diagnostics'},
-    lualine_c = {'filename'},
-    lualine_x = {'encoding', 'fileformat', 'filetype'},
-    lualine_y = {'progress'},
-    lualine_z = {'location'}
-  },
-  inactive_sections = {
-    lualine_a = {},
-    lualine_b = {},
-    lualine_c = {'filename'},
-    lualine_x = {'location'},
-    lualine_y = {},
-    lualine_z = {}
-  },
-  tabline = {},
-  extensions = {}
+    options = {
+        icons_enabled = true,
+        theme = 'auto',
+        component_separators = { left = '', right = ''},
+        section_separators = { left = '', right = ''},
+        disabled_filetypes = {},
+        always_divide_middle = true,
+        globalstatus = false,
+    },
+    sections = {
+        lualine_a = {'mode'},
+        lualine_b = {'branch', 'diff', 'diagnostics'},
+        lualine_c = {'filename'},
+        lualine_x = {'encoding', 'fileformat', 'filetype'},
+        lualine_y = {'progress'},
+        lualine_z = {'location'}
+    },
+    inactive_sections = {
+        lualine_a = {},
+        lualine_b = {},
+        lualine_c = {'filename'},
+        lualine_x = {'location'},
+        lualine_y = {},
+        lualine_z = {}
+    },
+    tabline = {},
+    extensions = {}
 }
