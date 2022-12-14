@@ -5,6 +5,9 @@ return require('packer').startup(function()
 	--> themes
 	use 'tanvirtin/monokai.nvim'
 
+	--> nvim-treesitter
+	use 'nvim-treesitter/nvim-treesitter'
+
 	--> lspconfig
 	use 'neovim/nvim-lspconfig' 
 
