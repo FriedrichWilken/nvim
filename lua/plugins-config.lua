@@ -1,5 +1,27 @@
 require('monokai').setup() 
 
+
+local lspconfig = require('lspconfig')
+local servers = { 'gopls' }
+for _, lsp in ipairs(servers) do
+    lspconfig[lsp].setup {
+        on_attach = function()
+        vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer= 0})
+        vim.keymap.set("n", "gd", vim.lsp.buf.definition, {buffer= 0})
+        vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {buffer= 0})
+        vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, {buffer= 0})
+        vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {buffer= 0})
+        vim.keymap.set("n", "ej", vim.diagnostic.goto_next, {buffer= 0})
+        vim.keymap.set("n", "ek", vim.diagnostic.goto_prev, {buffer= 0})
+        vim.keymap.set("n", "fe", "<cmd>Telescope diagnostics<cr>", {buffer= 0})
+        vim.keymap.set("n", "rr", vim.lsp.buf.rename, {buffer= 0})
+        vim.keymap.set("n", "fmt", vim.lsp.buf.formatting, {buffer= 0})
+        vim.keymap.set("n", "ca", vim.lsp.buf.code_action, {buffer= 0})
+        end,
+        capabilities = capabilities,
+    }
+end
+
 require('mason').setup()
 
 -- rust-tools sets up lsp for rust so do not set up lsp for rust or this will cause conflicts
