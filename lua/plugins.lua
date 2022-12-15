@@ -1,4 +1,7 @@
 return require('packer').startup(function()
+	--> floaterm
+	use 'voldikss/vim-floaterm'
+
 	--> Packer
 	use 'wbthomason/packer.nvim'
 
@@ -33,4 +36,7 @@ return require('packer').startup(function()
 	'nvim-lualine/lualine.nvim',
 	requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 	}
+
+	use 'puremourning/vimspector'
+
 end)
