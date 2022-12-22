@@ -1,4 +1,6 @@
 return require('packer').startup(function()
+    --> auto-pair
+    use 'jiangmiao/auto-pairs'
 	--> telescope
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.0',

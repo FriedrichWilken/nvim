@@ -1,3 +1,4 @@
+--> theme
 require('monokai').setup() 
 
 --> Telescope
@@ -9,7 +10,7 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 -- Treesitter Plugin Setup 
 require('nvim-treesitter.configs').setup {
-  ensure_installed = { "lua", "rust", "toml", "go", "yaml" },
+  ensure_installed = { "lua", "rust", "toml", "go", "yaml", "bash" },
   auto_install = true,
   highlight = {
     enable = true,
@@ -24,9 +25,11 @@ require('nvim-treesitter.configs').setup {
 }
 
 
+
 --> LSP config
 local lspconfig = require('lspconfig')
-local servers = { 'gopls' }
+-- be aware 
+local servers = { 'gopls', 'bashls' }
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
         on_attach = function()
