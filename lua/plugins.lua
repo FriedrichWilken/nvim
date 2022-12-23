@@ -8,8 +8,8 @@ return require('packer').startup(function()
   		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
-	--> floaterm
-	use 'voldikss/vim-floaterm'
+    --> fterm (floating terminal)
+    use 'numToStr/FTerm.nvim'
 
 	--> Packer
 	use 'wbthomason/packer.nvim'
