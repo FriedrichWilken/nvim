@@ -1,6 +1,9 @@
 # nvim
 this is my nvim config. for plugins I use (packer)[https://github.com/wbthomason/packer.nvim] 
 
+## prerequisits
+- fd https://github.com/sharkdp/fd#installation 
+
 ## useful commands for Packer (plugin manager) 
 ```
 -- You must run this or `PackerSync` whenever you make changes to your plugin configuration

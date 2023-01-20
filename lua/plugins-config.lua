@@ -21,6 +21,10 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
+require("telescope").load_extension "file_browser"
+local file_browser = require "telescope".extensions.file_browser.file_browser
+vim.keymap.set('n', '<leader>jj', file_browser, {})
+
 -- Treesitter Plugin Setup 
 require('nvim-treesitter.configs').setup {
   ensure_installed = { "lua", "rust", "toml", "go", "yaml", "bash" },

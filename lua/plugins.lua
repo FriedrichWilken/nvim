@@ -7,6 +7,11 @@ return require('packer').startup(function()
 		-- or                            , branch = '0.1.x',
   		requires = { {'nvim-lua/plenary.nvim'} }
 	}
+    -- install fd https://github.com/sharkdp/fd#installation 
+    use { "nvim-telescope/telescope-file-browser.nvim" } 
+
+    --> nvim-web-devicons
+    use 'nvim-tree/nvim-web-devicons'
 
     --> fterm (floating terminal)
     use 'numToStr/FTerm.nvim'
@@ -27,7 +32,7 @@ return require('packer').startup(function()
 	use 'simrat39/rust-tools.nvim'
 
 	--> Completion
-    	use 'hrsh7th/nvim-cmp' 
+    use 'hrsh7th/nvim-cmp' 
 	use 'hrsh7th/cmp-nvim-lsp'
 	use 'hrsh7th/cmp-nvim-lua'
 	use 'hrsh7th/cmp-nvim-lsp-signature-help'
