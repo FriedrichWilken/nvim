@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # get neovim running
 
 ## build neovim
