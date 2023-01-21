@@ -41,8 +41,6 @@ require('nvim-treesitter.configs').setup {
   }
 }
 
-
-
 --> LSP config
 local lspconfig = require('lspconfig')
 -- be aware 
@@ -108,14 +106,11 @@ require('lualine').setup {
         lualine_b = {'branch', 'diff', 'diagnostics'},
         lualine_c = {
             {
-                'filetype',
-            },
-            {
                 'filename', 
                 path = 3    
             }
         },
-        lualine_x = {'encoding', 'fileformat' },
+        lualine_x = { 'filetype', 'encoding', 'fileformat' },
         lualine_y = {'progress'},
         lualine_z = {'location'}
     },
