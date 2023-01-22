@@ -53,8 +53,8 @@ for _, lsp in ipairs(servers) do
         vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {buffer= 0})
         vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, {buffer= 0})
         vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {buffer= 0})
-        vim.keymap.set("n", "ej", vim.diagnostic.goto_next, {buffer= 0})
-        vim.keymap.set("n", "ek", vim.diagnostic.goto_prev, {buffer= 0})
+       -- vim.keymap.set("n", "<leader>ej", vim.diagnostic.goto_next, {buffer= 0})
+        --vim.keymap.set("n", "<leader>ek", vim.diagnostic.goto_prev, {buffer= 0})
         vim.keymap.set("n", "fe", "<cmd>Telescope diagnostics<cr>", {buffer= 0})
         vim.keymap.set("n", "rr", vim.lsp.buf.rename, {buffer= 0})
         vim.keymap.set("n", "fmt", vim.lsp.buf.formatting, {buffer= 0})
@@ -107,7 +107,7 @@ require('lualine').setup {
         lualine_c = {
             {
                 'filename', 
-                path = 3    
+                path = 3,   
             }
         },
         lualine_x = { 'filetype', 'encoding', 'fileformat' },
@@ -117,7 +117,12 @@ require('lualine').setup {
     inactive_sections = {
         lualine_a = {},
         lualine_b = {},
-        lualine_c = {'filename'},
+        lualine_c = {
+            {
+                'filename',
+                path = 3,
+            }
+        },
         lualine_x = {'location'},
         lualine_y = {},
         lualine_z = {}
