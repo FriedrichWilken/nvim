@@ -1,3 +1,6 @@
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 require('plugins')
 require('plugins-config')
 require('opts')
@@ -87,4 +90,5 @@ cmp.setup({
       end,
   },
 })
+
 
