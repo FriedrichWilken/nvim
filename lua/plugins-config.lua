@@ -48,17 +48,17 @@ local servers = { 'gopls', 'bashls' }
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
         on_attach = function()
-        vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer= 0})
-        vim.keymap.set("n", "gd", vim.lsp.buf.definition, {buffer= 0})
-        vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {buffer= 0})
-        vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, {buffer= 0})
-        vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {buffer= 0})
+        vim.keymap.set("n", "<leader>K", vim.lsp.buf.hover, {buffer= 0})
+        vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {buffer= 0})
+        vim.keymap.set("n", "<leader>gD", vim.lsp.buf.declaration, {buffer= 0})
+        vim.keymap.set("n", "<leader>gt", vim.lsp.buf.type_definition, {buffer= 0})
+        vim.keymap.set("n", "<leader>gi", vim.lsp.buf.implementation, {buffer= 0})
        -- vim.keymap.set("n", "<leader>ej", vim.diagnostic.goto_next, {buffer= 0})
         --vim.keymap.set("n", "<leader>ek", vim.diagnostic.goto_prev, {buffer= 0})
-        vim.keymap.set("n", "fe", "<cmd>Telescope diagnostics<cr>", {buffer= 0})
-        vim.keymap.set("n", "rr", vim.lsp.buf.rename, {buffer= 0})
-        vim.keymap.set("n", "fmt", vim.lsp.buf.formatting, {buffer= 0})
-        vim.keymap.set("n", "ca", vim.lsp.buf.code_action, {buffer= 0})
+        vim.keymap.set("n", "<leader>fe", "<cmd>Telescope diagnostics<cr>", {buffer= 0})
+        vim.keymap.set("n", "<leader>rr", vim.lsp.buf.rename, {buffer= 0})
+        vim.keymap.set("n", "<leader>fmt", vim.lsp.buf.formatting, {buffer= 0})
+        vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {buffer= 0})
         end,
         capabilities = capabilities,
     }
@@ -76,17 +76,17 @@ rt.setup({
       -- Code action groups
       vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
 
-      vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer= 0})
-      vim.keymap.set("n", "gd", vim.lsp.buf.definition, {buffer= 0})
-      vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {buffer= 0})
-      vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, {buffer= 0})
-      vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {buffer= 0})
-      vim.keymap.set("n", "ej", vim.diagnostic.goto_next, {buffer= 0})
-      vim.keymap.set("n", "ek", vim.diagnostic.goto_prev, {buffer= 0})
-      vim.keymap.set("n", "fe", "<cmd>Telescope diagnostics<cr>", {buffer= 0})
-      vim.keymap.set("n", "rr", vim.lsp.buf.rename, {buffer= 0})
-      vim.keymap.set("n", "fmt", vim.lsp.buf.formatting, {buffer= 0})
-      vim.keymap.set("n", "ca", vim.lsp.buf.code_action, {buffer= 0})
+      vim.keymap.set("n", "<leader>K", vim.lsp.buf.hover, {buffer= 0})
+      vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {buffer= 0})
+      vim.keymap.set("n", "<leader>gD", vim.lsp.buf.declaration, {buffer= 0})
+      vim.keymap.set("n", "<leader>gt", vim.lsp.buf.type_definition, {buffer= 0})
+      vim.keymap.set("n", "<leader>gi", vim.lsp.buf.implementation, {buffer= 0})
+      vim.keymap.set("n", "<leader>ej", vim.diagnostic.goto_next, {buffer= 0})
+      vim.keymap.set("n", "<leader>ek", vim.diagnostic.goto_prev, {buffer= 0})
+      vim.keymap.set("n", "<leader>fe", "<cmd>Telescope diagnostics<cr>", {buffer= 0})
+      vim.keymap.set("n", "<leader>rr", vim.lsp.buf.rename, {buffer= 0})
+      vim.keymap.set("n", "<leader>fmt", vim.lsp.buf.formatting, {buffer= 0})
+      vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {buffer= 0})
     end,
   },
 })
