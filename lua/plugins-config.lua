@@ -57,7 +57,7 @@ for _, lsp in ipairs(servers) do
         --vim.keymap.set("n", "<leader>ek", vim.diagnostic.goto_prev, {buffer= 0})
         vim.keymap.set("n", "<leader>fe", "<cmd>Telescope diagnostics<cr>", {buffer= 0})
         vim.keymap.set("n", "<leader>rr", vim.lsp.buf.rename, {buffer= 0})
-        vim.keymap.set("n", "<leader>fmt", vim.lsp.buf.formatting, {buffer= 0})
+        vim.keymap.set("n", "<leader><leader>", vim.lsp.buf.formatting, {buffer= 0})
         vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {buffer= 0})
         end,
         capabilities = capabilities,
@@ -75,7 +75,6 @@ rt.setup({
       vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
       -- Code action groups
       vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
-
       vim.keymap.set("n", "<leader>K", vim.lsp.buf.hover, {buffer= 0})
       vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {buffer= 0})
       vim.keymap.set("n", "<leader>gD", vim.lsp.buf.declaration, {buffer= 0})
@@ -85,7 +84,7 @@ rt.setup({
       vim.keymap.set("n", "<leader>ek", vim.diagnostic.goto_prev, {buffer= 0})
       vim.keymap.set("n", "<leader>fe", "<cmd>Telescope diagnostics<cr>", {buffer= 0})
       vim.keymap.set("n", "<leader>rr", vim.lsp.buf.rename, {buffer= 0})
-      vim.keymap.set("n", "<leader>fmt", vim.lsp.buf.formatting, {buffer= 0})
+      vim.keymap.set("n", "<leader><leader>", vim.lsp.buf.formatting, {buffer= 0})
       vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {buffer= 0})
     end,
   },
