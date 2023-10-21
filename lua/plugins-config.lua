@@ -53,11 +53,14 @@ for _, lsp in ipairs(servers) do
         vim.keymap.set("n", "<leader>gD", vim.lsp.buf.declaration, {buffer= 0})
         vim.keymap.set("n", "<leader>gt", vim.lsp.buf.type_definition, {buffer= 0})
         vim.keymap.set("n", "<leader>gi", vim.lsp.buf.implementation, {buffer= 0})
+        vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
        -- vim.keymap.set("n", "<leader>ej", vim.diagnostic.goto_next, {buffer= 0})
         --vim.keymap.set("n", "<leader>ek", vim.diagnostic.goto_prev, {buffer= 0})
         vim.keymap.set("n", "<leader>fe", "<cmd>Telescope diagnostics<cr>", {buffer= 0})
         vim.keymap.set("n", "<leader>rr", vim.lsp.buf.rename, {buffer= 0})
-        vim.keymap.set("n", "<leader><leader>", vim.lsp.buf.formatting, {buffer= 0})
+        vim.keymap.set("n", "<leader>F",  function()
+            vim.lsp.buf.format { async = true }
+        end, opts)
         vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {buffer= 0})
         end,
         capabilities = capabilities,
