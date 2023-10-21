@@ -3,8 +3,7 @@ return require('packer').startup(function()
     use 'jiangmiao/auto-pairs'
 	--> telescope
 	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.0',
-		-- or                            , branch = '0.1.x',
+		'nvim-telescope/telescope.nvim',
   		requires = { {'nvim-lua/plenary.nvim'} }
 	}
     -- install fd https://github.com/sharkdp/fd#installation 
