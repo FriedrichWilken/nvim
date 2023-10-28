@@ -87,7 +87,9 @@ rt.setup({
       vim.keymap.set("n", "<leader>ek", vim.diagnostic.goto_prev, {buffer= 0})
       vim.keymap.set("n", "<leader>fe", "<cmd>Telescope diagnostics<cr>", {buffer= 0})
       vim.keymap.set("n", "<leader>rr", vim.lsp.buf.rename, {buffer= 0})
-      vim.keymap.set("n", "<leader><leader>", vim.lsp.buf.formatting, {buffer= 0})
+        vim.keymap.set("n", "<leader>F",  function()
+            vim.lsp.buf.format { async = true }
+        end, opts)
       vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {buffer= 0})
     end,
   },
