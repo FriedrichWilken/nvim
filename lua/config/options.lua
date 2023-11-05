@@ -20,6 +20,3 @@ vim.opt.completeopt = { "menuone", "noselect", "noinsert" }
 
 -- screen lines to keep above/below the cursor
 vim.o.scrolloff = 12
-
-vim.api.nvim_set_keymap("i", "<Tab>", 'pumvisible() ? "\\<C-n>" : "\\<Tab>"', { expr = true })
-vim.api.nvim_set_keymap("i", "<S-Tab>", 'pumvisible() ? "\\<C-p>" : "\\<S-Tab>"', { expr = true })
